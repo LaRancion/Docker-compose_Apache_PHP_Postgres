@@ -3,7 +3,7 @@ session_start();
 
 $row[0] = "";
 
-$connStr = "host=172.23.0.2 port=5432 dbname=itsdb user=its password=itsITS200";
+$connStr = "host=* port=5432 dbname=* user=* password=*";
 
 if (!$conn = pg_connect($connStr)) {
     echo "errore di connessione al DB";
