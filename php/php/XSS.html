@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form without XSS Prevention</title>
+</head>
+
+<body>
+    <h2>Enter your name</h2>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]); ?>">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Welcome</h2>
+    <?php
+    // Process the form submission
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get the submitted name
+        $name = $_POST['name'];
+
+        // Display the name without any sanitization
+        echo "Hello, " . $name . "!";
+    }
+    ?>
+</body>
+
+</html>
