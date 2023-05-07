@@ -17,11 +17,11 @@
 
     <?php
     // Database connection settings
-    $host = "172.28.0.2";
-    $port = "5432";
-    $dbname = "itsdb";
-    $user = "its";
-    $password = "itsITS200";
+$host = 'ip';
+$port = 5432;
+$dbname = 'dbname';
+$user = 'user';
+$password = 'password';
 
     // Process the form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
