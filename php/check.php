@@ -1,10 +1,10 @@
 <?php
 // Database connection settings
-$host = '172.28.0.2';
+$host = 'ip';
 $port = 5432;
-$dbname = 'itsdb';
-$user = 'its';
-$password = 'itsITS200';
+$dbname = 'dbname';
+$user = 'user';
+$password = 'password';
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
